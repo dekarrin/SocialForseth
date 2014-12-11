@@ -61,7 +61,7 @@ namespace SocialForseth
             Response.Redirect("/FileClaim.aspx");
         }
 
-        protected void ImageButtonHelp_Click(object sender, ImageClickEventArgs e)
+        protected void ImageButtonHelp_Click(object sender, EventArgs e)
         {
             MailMessage mail = new MailMessage("dabickster@gmail.com", "nathan.spanier@ndsu.edu");
             SmtpClient client = new SmtpClient();

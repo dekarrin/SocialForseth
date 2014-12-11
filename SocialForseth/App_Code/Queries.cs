@@ -18,7 +18,7 @@ namespace SocialForseth
 		public static int CheckLogin(string user, string passhash)
 		{
 			int uid = -1;
-			using (SocialDataEntities1 db = new SocialDataEntities1())
+			using (HCIDataEntities db = new HCIDataEntities())
 			{
 				var query = from a in db.accounts
 					   where a.handle == user &&
@@ -40,7 +40,7 @@ namespace SocialForseth
         public static account GetAccount(int uid)
         {
             account acc;
-            using (SocialDataEntities1 db = new SocialDataEntities1())
+            using (HCIDataEntities db = new HCIDataEntities())
             {
                 acc = (from a in db.accounts
                        where a.id == uid
@@ -54,10 +54,10 @@ namespace SocialForseth
         public static void AddClaim(string account, string amount, string location)
         {
             claim c = new claim();
-            c.account = account;
-            c.amount = amount;
+            c.account = int.Parse(account);
+            c.amount = int.Parse(amount);
             c.location = location;
-            using (SocialDataEntities1 db = new SocialDataEntities1())
+            using (HCIDataEntities db = new HCIDataEntities())
             {
                 db.claims.Add(c);
                 db.SaveChanges();
@@ -66,14 +66,15 @@ namespace SocialForseth
 
         public static ICollection<claim> GetClaims(int uid)
         {
-            account acc;
-            using ( SocialDataEntities1 db = new SocialDataEntities1())
+            ICollection<claim> claims = null;
+            using ( HCIDataEntities db = new HCIDataEntities())
             {
-                acc = (from a in db.accounts
+                account acc = (from a in db.accounts
                       where a.id == uid
                       select a).First();
+                claims = acc.claims;
             }
-            return acc.claims;
+            return claims;
         }
 	}
 }

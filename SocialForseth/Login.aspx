@@ -37,37 +37,14 @@
 		<tr>
 			<th>Username</th>
 			<th>Password</th>
-			<th>Role</th>
-		</tr>
-		<tr>
-			<td>dekarrin</td>
-			<td>penguins</td>
-			<td>administrator</td>
 		</tr>
 		<tr>
 			<td>taldan</td>
-			<td>monkey1</td>
-			<td>moderator</td>
+			<td>penguins</td>
 		</tr>
 		<tr>
-			<td>dummy</td>
+			<td>bickster</td>
 			<td>monkey1</td>
-			<td>user</td>
-		</tr>
-		<tr>
-			<td>mod</td>
-			<td>monkey1</td>
-			<td>moderator</td>
-		</tr>
-		<tr>
-			<td>admin</td>
-			<td>monkey1</td>
-			<td>administrator</td>
-		</tr>
-		<tr>
-			<td>user</td>
-			<td>monkey1</td>
-			<td>user</td>
 		</tr>
 	</table>
 </body>
