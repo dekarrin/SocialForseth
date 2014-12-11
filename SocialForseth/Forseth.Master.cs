@@ -27,7 +27,7 @@ namespace SocialForseth
 		}
 
 		protected void Page_Init(object sender, EventArgs e)
-        {
+		{
 			// require login
 			if (Session["uid"] == null)
 			{
@@ -61,16 +61,16 @@ namespace SocialForseth
             Response.Redirect("/FileClaim.aspx");
         }
 
-        protected void ImageButtonHelp_Click(object sender, EventArgs e)
+        protected void ImageButtonHelp_Click(object sender, ImageClickEventArgs e)
         {
-            MailMessage mail = new MailMessage("dabickster@gmail.com", "nathan.spanier@ndsu.edu");
+            MailMessage mail = new MailMessage("dabickster@gmail.com", "j.caesarism@gmail.com"); //Personal emails are used here. In production they will be replaced with technician accounts.
             SmtpClient client = new SmtpClient();
             client.Port = 25;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
-            client.Host = "smtp.gmail.com";
+            client.Host = "smtp.google.com";
             mail.Subject = "Request for Help from " + Session["uid"];
-            mail.Body = "Help me Obi-wan Kenobi, you're my only hope!";
+            mail.Body = "Hello support technician, " + Session["uid"] + "has requested assistance!";
             client.Send(mail);
             Response.Redirect("/Help.aspx");
         }

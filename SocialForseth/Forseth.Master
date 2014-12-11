@@ -18,8 +18,8 @@
 			<table style="width:100%;">
 				<tr>
 					<td>
-                       <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help"/>
-                                             <asp:Button ID="ButtonHelp" runat="server" Text="Help" OnClick="ImageButtonHelp_Click" />
+                        <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help"/>
+                        <asp:Button ID="ButtonHelp" runat="server" Text="Help" OnClick="ImageButtonHelp_Click" />
 					</td>
 					<td>
                         <asp:LinkButton ID="ButtonFileClaim" runat="server" OnClick="ButtonFileClaim_Click">File a Claim</asp:LinkButton>

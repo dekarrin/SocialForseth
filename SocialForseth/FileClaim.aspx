@@ -10,23 +10,23 @@
 	</div>
     <hr />
 	<p>
-		<asp:Label ID="LabelBadSubmission" runat="server" Text="Useful user feedback" Font-Bold="True" Font-Italic="True" Font-Size="Small" ForeColor="#CC0000" Visible="False"></asp:Label>
+		<asp:Label ID="LabelBadSubmission" runat="server" Text="Invalid upload file type. Only .pdf, .jpeg, and .png are allowed." Font-Bold="True" Font-Italic="True" Font-Size="Small" ForeColor="#CC0000" Visible="False"></asp:Label>
 	</p>
 	<p>
 		Claim Account:
         <asp:DropDownList ID="DropDownListAccount" runat="server">
-            <asp:ListItem>ProviderA</asp:ListItem>
-            <asp:ListItem>ProviderB</asp:ListItem>
-            <asp:ListItem>ProviderC</asp:ListItem>
+            <asp:ListItem>HSA: $2603.29</asp:ListItem>
+            <asp:ListItem>FSA: $10000.00</asp:ListItem>
+            <asp:ListItem>VEBA: $291.99</asp:ListItem>
         </asp:DropDownList>
 	</p>
-		Claim Amount: $<asp:TextBox ID="TextBoxAmount" runat="server"></asp:TextBox>
+		Claim Amount: $<asp:TextBox ID="TextBoxAmount" runat="server" ></asp:TextBox>
 	<p>
         Claim Location:
         <asp:DropDownList ID="DropDownListProvider" runat="server">
-            <asp:ListItem>LocationA</asp:ListItem>
-            <asp:ListItem>LocationB</asp:ListItem>
-            <asp:ListItem>LocationC</asp:ListItem>
+            <asp:ListItem>Alina</asp:ListItem>
+            <asp:ListItem>Sanford Health</asp:ListItem>
+            <asp:ListItem>Mayo Clinic</asp:ListItem>
         </asp:DropDownList>
     </p>
     <p>
@@ -34,6 +34,7 @@
         <asp:Label ID="LabelAttachments" runat="server" Text=""></asp:Label>
     </p>
     <p>
+        <asp:ImageButton ID="ImageButtonUpload" runat="server" Text="Attach a File" OnClick="ButtonUpload_Click" src="/images/BrowseIcon.png" />
         <asp:Button ID="ButtonUpload" runat="server" Text="Attach a File" OnClick="ButtonUpload_Click" />
 		<asp:Button ID="ButtonSubmit" runat="server" Text="Submit" OnClick="ButtonSubmit_Click" />
 	</p>

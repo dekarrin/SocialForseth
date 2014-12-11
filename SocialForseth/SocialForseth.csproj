@@ -69,6 +69,12 @@
     <Content Include="App_Data\HCIData_log.ldf">
       <DependentUpon>HCIData.mdf</DependentUpon>
     </Content>
+    <Content Include="images\BrowseIcon.png" />
+    <Content Include="images\CancelIcon.png" />
+    <Content Include="images\HCIForsethLogo.png" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\SaveIcon.png" />
+    <Content Include="App_Data\SocialData.sdf" />
     <Content Include="AccountSummary.aspx" />
     <Content Include="Forseth.css" />
     <Content Include="FileClaim.aspx" />
@@ -105,7 +111,7 @@
     <Compile Include="Forseth.Master.designer.cs">
       <DependentUpon>Forseth.Master</DependentUpon>
     </Compile>
-    <Compile Include="HCIModel.Context.cs">
+	<Compile Include="HCIModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HCIModel.Context.tt</DependentUpon>
@@ -147,7 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Forseth.Master" />
     <EntityDeploy Include="HCIModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HCIModel.Designer.cs</LastGenOutput>
@@ -165,6 +170,7 @@
       <DependentUpon>HCIModel.edmx</DependentUpon>
       <LastGenOutput>HCIModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Forseth.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

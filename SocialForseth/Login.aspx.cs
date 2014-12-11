@@ -27,7 +27,6 @@ namespace SocialForseth
 			HashAlgorithm hasher = new SHA1Managed();
 			byte[] bytes = hasher.ComputeHash(enc.GetBytes(TextBoxPassword.Text));
 			string hash = enc.GetString(bytes);
-            
 			string user = TextBoxUsername.Text;
 			int uid = Queries.CheckLogin(user, hash);
 			if (uid >= 0)

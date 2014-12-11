@@ -6,11 +6,19 @@
 <head runat="server">
     <title>Please Log In</title>
 	<link rel="stylesheet" type="text/css" href="Forseth.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 300px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
+        <img alt="HCIForseth Logo" class="auto-style1" longdesc="HCIForseth Logo" src="/images/HCIForsethLogo.png" /><br />
+
     	Please login:</div>
     	<hr />
 		<p>
@@ -23,16 +31,15 @@
 		<p>
             Provider:
             <asp:DropDownList ID="DropDownListProvider" runat="server">
-                <asp:ListItem>ProviderA</asp:ListItem>
-                <asp:ListItem>ProviderB</asp:ListItem>
-                <asp:ListItem>ProviderC</asp:ListItem>
+                <asp:ListItem>MediCare</asp:ListItem>
+                <asp:ListItem>Delta</asp:ListItem>
+                <asp:ListItem>Blue Cross</asp:ListItem>
             </asp:DropDownList>
         </p>
         <p>
 			<asp:Button ID="ButtonLogin" runat="server" OnClick="ButtonLogin_Click" Text="Log In" />
 		</p>
-    </form>
-	<table class="bordered">
+        	<table class="bordered">
 		<caption>Valid Logins</caption>
 		<tr>
 			<th>Username</th>
@@ -47,5 +54,6 @@
 			<td>monkey1</td>
 		</tr>
 	</table>
+    </form>
 </body>
 </html>
