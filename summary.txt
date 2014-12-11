@@ -1,0 +1,2 @@
+Summary:
+During the course of this project we learned that building a website that is designed for as many users as possible is a difficult task. It produces additional and unforeseen problems as 

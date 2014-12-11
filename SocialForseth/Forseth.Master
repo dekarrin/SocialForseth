@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Forseth.Master.cs" Inherits="SocialForseth.Forseth" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Forseth.css" />
+	<asp:ContentPlaceHolder ID="PlaceholderHead" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<div id="header">
+			<asp:Label ID="LabelMainTitle" runat="server" Text="Social Forseth"></asp:Label>
+   		</div>
+		<div id="userbar" style="text-align: center">
+			<table style="width:100%;">
+				<tr>
+					<td>
+                        <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help"/>
+                        <asp:Button ID="ButtonHelp" runat="server" Text="Help" OnClick="ImageButtonHelp_Click" />
+					</td>
+					<td>
+                        <asp:LinkButton ID="ButtonFileClaim" runat="server" OnClick="ButtonFileClaim_Click">File a Claim</asp:LinkButton>
+					</td>
+					<td>&nbsp;</td>
+					<td style="width:120px">Logged in as:</td>
+					<td style="width:120px"><%= ActiveAccount.handle %></td>
+                    <td style="width:120px">
+                        <asp:LinkButton ID="ButtonAccountSummary" runat="server" OnClick="ButtonAccountSummary_Click">Account Summary</asp:LinkButton>
+                    </td>
+					<td style="width:120px">
+						<asp:LinkButton ID="ButtonLogout" runat="server" OnClick="ButtonLogout_Click">Log Out</asp:LinkButton>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<ul id="breadcrumbs">
+			<li><a href="Default.aspx">Home</a></li>
+			<asp:ContentPlaceHolder ID="PlaceholderBreadcrumbs" runat="server"></asp:ContentPlaceHolder>
+		</ul>
+		<div id="main">
+		<asp:ContentPlaceHolder ID="PlaceholderMain" runat="server">
+		</asp:ContentPlaceHolder>
+		</div>
+	</form>
+</body>
+</html>

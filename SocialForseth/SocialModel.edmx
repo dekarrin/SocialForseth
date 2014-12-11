@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SocialDataModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SocialDataModelStoreContainer">
+          </EntityContainer>
+        </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SocialDataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SocialDataEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="accounts" EntityType="SocialDataModel.account" />
+          <EntitySet Name="claims" EntityType="SocialDataModel.claim" />
+          <AssociationSet Name="accountclaim" Association="SocialDataModel.accountclaim">
+            <End Role="account" EntitySet="accounts" />
+            <End Role="claim" EntitySet="claims" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="handle" Type="String" Nullable="false" />
+          <NavigationProperty Name="claims" Relationship="SocialDataModel.accountclaim" FromRole="account" ToRole="claim" />
+        </EntityType>
+        <EntityType Name="claim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="account" Type="String" Nullable="false" />
+          <Property Name="amount" Type="String" Nullable="false" />
+          <Property Name="location" Type="String" Nullable="false" />
+          <NavigationProperty Name="account1" Relationship="SocialDataModel.accountclaim" FromRole="claim" ToRole="account" />
+          <Property Name="approved" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="accountclaim">
+          <End Type="SocialDataModel.account" Role="account" Multiplicity="1" />
+          <End Type="SocialDataModel.claim" Role="claim" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SocialDataModelStoreContainer" CdmEntityContainer="SocialDataEntities1">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
