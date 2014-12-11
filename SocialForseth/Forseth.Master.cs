@@ -27,7 +27,7 @@ namespace SocialForseth
 		}
 
 		protected void Page_Init(object sender, EventArgs e)
-		{
+        {
 			// require login
 			if (Session["uid"] == null)
 			{
@@ -68,7 +68,7 @@ namespace SocialForseth
             client.Port = 25;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
-            client.Host = "smtp.google.com";
+            client.Host = "smtp.gmail.com";
             mail.Subject = "Request for Help from " + Session["uid"];
             mail.Body = "Help me Obi-wan Kenobi, you're my only hope!";
             client.Send(mail);
