@@ -13,10 +13,10 @@ namespace SocialForseth
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SocialDataEntities1 : DbContext
+    public partial class HCIDataEntities : DbContext
     {
-        public SocialDataEntities1()
-            : base("name=SocialDataEntities1")
+        public HCIDataEntities()
+            : base("name=HCIDataEntities")
         {
         }
     

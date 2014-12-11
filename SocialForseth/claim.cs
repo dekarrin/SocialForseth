@@ -14,11 +14,11 @@ namespace SocialForseth
     
     public partial class claim
     {
-        public int Id { get; set; }
-        public string account { get; set; }
-        public string amount { get; set; }
+        public int id { get; set; }
+        public int account { get; set; }
+        public Nullable<int> amount { get; set; }
         public string location { get; set; }
-        public string approved { get; set; }
+        public Nullable<bool> approved { get; set; }
     
         public virtual account account1 { get; set; }
     }

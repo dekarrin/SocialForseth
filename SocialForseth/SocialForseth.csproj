@@ -65,7 +65,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\SocialData.sdf" />
+    <Content Include="App_Data\HCIData.mdf" />
+    <Content Include="App_Data\HCIData_log.ldf">
+      <DependentUpon>HCIData.mdf</DependentUpon>
+    </Content>
     <Content Include="AccountSummary.aspx" />
     <Content Include="Forseth.css" />
     <Content Include="FileClaim.aspx" />
@@ -76,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="account.cs">
-      <DependentUpon>SocialModel.tt</DependentUpon>
+      <DependentUpon>HCIModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AccountSummary.aspx.cs">
       <DependentUpon>AccountSummary.aspx</DependentUpon>
@@ -86,7 +89,7 @@
       <DependentUpon>AccountSummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="claim.cs">
-      <DependentUpon>SocialModel.tt</DependentUpon>
+      <DependentUpon>HCIModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FileClaim.aspx.cs">
       <DependentUpon>FileClaim.aspx</DependentUpon>
@@ -101,6 +104,21 @@
     </Compile>
     <Compile Include="Forseth.Master.designer.cs">
       <DependentUpon>Forseth.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HCIModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCIModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCIModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCIModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCIModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Help.aspx.cs">
       <DependentUpon>Help.aspx</DependentUpon>
@@ -126,42 +144,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\Queries.cs" />
     <Compile Include="App_Code\Roles.cs" />
-    <Compile Include="SocialModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SocialModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SocialModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SocialModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SocialModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SocialModel.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <EntityDeploy Include="SocialModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SocialModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="SocialModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SocialModel.edmx</DependentUpon>
-      <LastGenOutput>SocialModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SocialModel.edmx.diagram">
-      <DependentUpon>SocialModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="SocialModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SocialModel.edmx</DependentUpon>
-      <LastGenOutput>SocialModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Forseth.Master" />
+    <EntityDeploy Include="HCIModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HCIModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="HCIModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HCIModel.edmx</DependentUpon>
+      <LastGenOutput>HCIModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="HCIModel.edmx.diagram">
+      <DependentUpon>HCIModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="HCIModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HCIModel.edmx</DependentUpon>
+      <LastGenOutput>HCIModel.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

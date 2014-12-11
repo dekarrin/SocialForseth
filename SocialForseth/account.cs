@@ -20,8 +20,8 @@ namespace SocialForseth
         }
     
         public int id { get; set; }
-        public string password { get; set; }
         public string handle { get; set; }
+        public string password { get; set; }
     
         public virtual ICollection<claim> claims { get; set; }
     }
