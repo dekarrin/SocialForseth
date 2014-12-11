@@ -22,6 +22,7 @@
           <Property Name="amount" Type="int" />
           <Property Name="location" Type="nvarchar" MaxLength="50" />
           <Property Name="approved" Type="bit" />
+          <Property Name="claimaccount" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_claims_accounts">
           <End Role="accounts" Type="Self.accounts" Multiplicity="1" />
@@ -66,6 +67,7 @@
           <Property Name="amount" Type="Int32" />
           <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="approved" Type="Boolean" />
+          <Property Name="claimaccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="account1" Relationship="Self.FK_claims_accounts" FromRole="claims" ToRole="accounts" />
         </EntityType>
         <Association Name="FK_claims_accounts">
@@ -80,7 +82,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="HCIDataEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HCIDataEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="accounts" EntityType="Self.account" />
           <EntitySet Name="claims" EntityType="Self.claim" />
           <AssociationSet Name="FK_claims_accounts" Association="Self.FK_claims_accounts">
@@ -93,7 +95,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HCIDataModelStoreContainer" CdmEntityContainer="HCIDataEntities">
+        <EntityContainerMapping StorageEntityContainer="HCIDataModelStoreContainer" CdmEntityContainer="HCIDataEntities1">
           <EntitySetMapping Name="accounts">
             <EntityTypeMapping TypeName="HCIDataModel.account">
               <MappingFragment StoreEntitySet="accounts">
@@ -111,6 +113,7 @@
                 <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="location" ColumnName="location" />
                 <ScalarProperty Name="approved" ColumnName="approved" />
+                <ScalarProperty Name="claimaccount" ColumnName="claimaccount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

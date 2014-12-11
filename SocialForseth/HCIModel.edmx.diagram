@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="73db4fa99d844db18b607e9b4f1f9fed" Name="Diagram1">
-        <EntityTypeShape EntityType="HCIDataModel.account" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HCIDataModel.claim" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="f8fb1ee3c18d458db4cb2df525b04c5f" Name="Diagram1">
+        <EntityTypeShape EntityType="HCIDataModel.account" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HCIDataModel.claim" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="HCIDataModel.FK_claims_accounts" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

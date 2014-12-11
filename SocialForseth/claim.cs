@@ -19,6 +19,7 @@ namespace SocialForseth
         public Nullable<int> amount { get; set; }
         public string location { get; set; }
         public Nullable<bool> approved { get; set; }
+        public string claimaccount { get; set; }
     
         public virtual account account1 { get; set; }
     }
