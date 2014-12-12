@@ -69,6 +69,7 @@
     <Content Include="App_Data\HCIData_log.ldf">
       <DependentUpon>HCIData.mdf</DependentUpon>
     </Content>
+    <Content Include="images\AccountSummary.png" />
     <Content Include="images\BrowseIcon.png" />
     <Content Include="images\CancelIcon.png" />
     <Content Include="images\HCIForsethLogo.png" />

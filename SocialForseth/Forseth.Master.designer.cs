@@ -58,22 +58,22 @@ namespace SocialForseth {
         protected global::System.Web.UI.WebControls.LinkButton ButtonFileClaim;
         
         /// <summary>
-        /// ButtonAccountSummary control.
+        /// AccountSummaryImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ButtonAccountSummary;
+        protected global::System.Web.UI.WebControls.ImageButton AccountSummaryImage;
         
         /// <summary>
-        /// ButtonLogout control.
+        /// LogoutImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ButtonLogout;
+        protected global::System.Web.UI.WebControls.ImageButton LogoutImage;
         
         /// <summary>
         /// PlaceholderBreadcrumbs control.

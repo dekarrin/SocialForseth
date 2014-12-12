@@ -16,18 +16,18 @@
 	</p>
 	<p id="claim_account">
 		Claim Account:
-        <asp:DropDownList ID="DropDownListAccount" runat="server">
+        <asp:DropDownList ID="DropDownListAccount" runat="server" TabIndex="1">
             <asp:ListItem>HSA: $2603.29</asp:ListItem>
             <asp:ListItem>FSA: $10000.00</asp:ListItem>
             <asp:ListItem>VEBA: $291.99</asp:ListItem>
         </asp:DropDownList>
 	</p>
     <p id="claim_amount">
-		Claim Amount: $<asp:TextBox ID="TextBoxAmount" runat="server" ></asp:TextBox>
+		Claim Amount: $<asp:TextBox ID="TextBoxAmount" runat="server" TabIndex="2"></asp:TextBox>
     </p>
 	<p id="claim_location">
         Claim Location:
-        <asp:DropDownList ID="DropDownListProvider" runat="server">
+        <asp:DropDownList ID="DropDownListProvider" runat="server" TabIndex="3">
             <asp:ListItem>Alina</asp:ListItem>
             <asp:ListItem>Sanford Health</asp:ListItem>
             <asp:ListItem>Mayo Clinic</asp:ListItem>
