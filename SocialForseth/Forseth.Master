@@ -16,7 +16,7 @@
         <img alt="HCIForseth Logo" class="auto-style1" src="/images/HCIForsethLogo.png" /><br />
    		</div>
 		<div id="userbar" style="text-align: center">
-			<table style="width:100%;">
+			<table>
 				<tr>
 					<td>
                         <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help"/>
@@ -26,8 +26,8 @@
                         <asp:LinkButton ID="ButtonFileClaim" runat="server" OnClick="ButtonFileClaim_Click">File a Claim</asp:LinkButton>
 					</td>
 					<td>&nbsp;</td>
-					<td style="width:120px">Logged in as:</td>
-					<td style="width:120px"><%= ActiveAccount.handle %></td>
+					<td style="width:80px">Logged in as:</td>
+					<td style="width:80px"><%= ActiveAccount.handle %></td>
                     <td style="width:120px">
                         <asp:LinkButton ID="ButtonAccountSummary" runat="server" OnClick="ButtonAccountSummary_Click">Account Summary</asp:LinkButton>
                     </td>
