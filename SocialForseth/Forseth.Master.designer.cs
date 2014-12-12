@@ -31,13 +31,22 @@ namespace SocialForseth {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ButtonFileClaim control.
+        /// ImageButtonHelp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ButtonFileClaim;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButtonHelp;
+        
+        /// <summary>
+        /// ImageFileClaim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageFileClaim;
         
         /// <summary>
         /// AccountSummaryImage control.
