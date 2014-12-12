@@ -12,6 +12,7 @@ namespace SocialForseth
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
             Queries.AddClaim(DropDownListAccount.SelectedValue, TextBoxAmount.Text, DropDownListProvider.SelectedValue, (int)Session["uid"]);
+            Response.Redirect("AccountSummary.aspx");
         }
 
         protected void ButtonUpload_Click(object sender, EventArgs e)

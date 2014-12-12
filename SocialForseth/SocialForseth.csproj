@@ -72,6 +72,7 @@
     <Content Include="images\AccountSummary.png" />
     <Content Include="images\BrowseIcon.png" />
     <Content Include="images\CancelIcon.png" />
+    <Content Include="images\fileClaim.jpg" />
     <Content Include="images\HCIForsethLogo.png" />
     <Content Include="images\helpIcon.jpg" />
     <Content Include="images\logout.png" />
