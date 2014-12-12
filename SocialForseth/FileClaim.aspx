@@ -38,7 +38,7 @@
         <asp:Label ID="LabelAttachments" runat="server" Text=""></asp:Label>
     </p>
     <p>
-        <asp:ImageButton ID="ImageButtonUpload" runat="server" Text="Attach a File" OnClick="ButtonUpload_Click" src="/images/BrowseIcon.png" />
+        <asp:ImageButton ID="ImageButtonUpload" runat="server" AlternateText="Attach a File" OnClick="ButtonUpload_Click" src="/images/BrowseIcon.png" />
         <asp:Button ID="ButtonUpload" runat="server" Text="Attach a File" OnClick="ButtonUpload_Click" />
 		<asp:Button ID="ButtonSubmit" runat="server" Text="Submit" OnClick="ButtonSubmit_Click" />
 	</p>
