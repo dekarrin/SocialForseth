@@ -17,7 +17,7 @@ namespace SocialForseth.HCI
 
         protected void ButtonCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Default.aspx");
+            Response.Redirect("/FileClaim.aspx");
         }
 
         protected void ButtonUpload_Click(object sender, EventArgs e)
