@@ -39,7 +39,7 @@ namespace SocialForseth.HCI
 
             //Save File to a Session variable
             //Session["X"] = file
-            Response.Redirect("/Default.aspx");
+            Response.Redirect("/FileClaim.aspx");
         }
     }
 }
