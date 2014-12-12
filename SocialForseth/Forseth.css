@@ -5,6 +5,14 @@ body {
     min-width: 900px;
 }
 
+.mail {
+    background-color: #FFFFE6;
+    border: 1px solid #9C9902;
+    padding: 5px;
+    margin: 10px;
+    width: 400px;
+}
+
 #userbar {
     background-color: #91C8FF;
     border: 1px solid #216BB5;

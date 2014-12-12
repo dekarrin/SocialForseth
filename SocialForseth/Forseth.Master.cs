@@ -63,6 +63,7 @@ namespace SocialForseth
 
         protected void ImageButtonHelp_Click(object sender, EventArgs e)
         {
+            /*
             MailMessage mail = new MailMessage("dabickster@gmail.com", "j.caesarism@gmail.com"); //Personal emails are used here. In production they will be replaced with technician accounts.
             SmtpClient client = new SmtpClient();
             client.Port = 25;
@@ -71,7 +72,7 @@ namespace SocialForseth
             client.Host = "smtp.gmail.com";
             mail.Subject = "Request for Help from " + Session["uid"];
             mail.Body = "Hello support technician, " + Session["uid"] + "has requested assistance!";
-            client.Send(mail);
+            client.Send(mail);*/
             Response.Redirect("/Help.aspx");
         }
 	}
