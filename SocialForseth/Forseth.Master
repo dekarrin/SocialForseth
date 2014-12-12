@@ -19,8 +19,7 @@
 			<table>
 				<tr>
 					<td>
-                        <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help" TabIndex="4" />
-                        <asp:Button ID="ButtonHelp" runat="server" AltText="Help" OnClick="ImageButtonHelp_Click" TabIndex="5" />
+                        <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help" ImageUrl="~/images/helpIcon.jpg" Width="40px "TabIndex="4" />
 					</td>
 					<td>
                         <asp:LinkButton ID="ButtonFileClaim" runat="server" OnClick="ButtonFileClaim_Click" TabIndex="6" >File a Claim</asp:LinkButton>
