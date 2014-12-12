@@ -19,18 +19,18 @@
 			<table>
 				<tr>
 					<td>
-                        <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help" src="/images/helpIcon.jpg" height="64px" Width="64px" "TabIndex="4" />
+                        <asp:ImageButton ID="ImageButtonHelp" runat="server" OnClick="ImageButtonHelp_Click" AlternateText="Help" src="/images/helpIcon.jpg" height="64px" Width="64px" TabIndex="6" />
 					</td>
 					<td>
-                        <asp:LinkButton ID="ButtonFileClaim" runat="server" OnClick="ButtonFileClaim_Click" TabIndex="6" >File a Claim</asp:LinkButton>
+                        <asp:LinkButton ID="ButtonFileClaim" runat="server" OnClick="ButtonFileClaim_Click" TabIndex="7" >File a Claim</asp:LinkButton>
 					</td>
 					<td>&nbsp;</td>
 
                     <td style="width:120px">
-                        <asp:ImageButton ID="AccountSummaryImage" runat="server" height="64px" Width="64px" AlternateText="Account Summary" OnClick="ButtonAccountSummary_Click" src="/images/AccountSummary.png" TabIndex="7" ></asp:ImageButton>
+                        <asp:ImageButton ID="AccountSummaryImage" runat="server" height="64px" Width="64px" AlternateText="Account Summary" OnClick="ButtonAccountSummary_Click" src="/images/AccountSummary.png" TabIndex="8" ></asp:ImageButton>
                     </td>
 					<td style="width:120px">
-                        <asp:ImageButton ID="LogoutImage" runat="server" height="64px" Width="64px" AlternateText="Logout" OnClick="ButtonLogout_Click" src="/images/logout.png" TabIndex="7" />
+                        <asp:ImageButton ID="LogoutImage" runat="server" height="64px" Width="64px" AlternateText="Logout" OnClick="ButtonLogout_Click" src="/images/logout.png" TabIndex="9" />
 					</td>
                     <td style="width:90px">Logged in as:</td>
 					<td style="width:60px"><%= ActiveAccount.handle %></td>

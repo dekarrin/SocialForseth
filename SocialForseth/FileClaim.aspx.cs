@@ -18,5 +18,10 @@ namespace SocialForseth
         {
             Response.Redirect("Upload.aspx");
         }
+
+        protected void ImageButtonHelp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Help.aspx");
+        }
     }
 }

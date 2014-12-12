@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="SocialForseth" Language="C#" MasterPageFile="/Forseth.Master" AutoEventWireup="true" CodeBehind="FileClaim.aspx.cs" Inherits="SocialForseth.Default" %>
-<%@ MasterType virtualpath="/Forseth.Master" %>
+
 
 <asp:Content ID="ContentBreadcrumbs" ContentPlaceHolderID="PlaceholderBreadcrumbs" runat="server">
 </asp:Content>
@@ -39,8 +39,8 @@
     </p>
     <p>
         <asp:ImageButton ID="ImageButtonUpload" runat="server" AlternateText="Attach a File" OnClick="ButtonUpload_Click" src="/images/BrowseIcon.png" />
-        <asp:Button ID="ButtonUpload" runat="server" Text="Attach a File" OnClick="ButtonUpload_Click" />
-		<asp:Button ID="ButtonSubmit" runat="server" Text="Submit" OnClick="ButtonSubmit_Click" />
+        <asp:Button ID="ButtonUpload" runat="server" Text="Attach a File" OnClick="ButtonUpload_Click" TabIndex="4" />
+		<asp:Button ID="ButtonSubmit" runat="server" Text="Submit" OnClick="ButtonSubmit_Click" TabIndex="5" />
 	</p>
     </div>
 </asp:Content>
