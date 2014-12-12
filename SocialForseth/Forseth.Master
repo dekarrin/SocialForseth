@@ -38,7 +38,7 @@
 			</table>
 		</div>
 		<ul id="breadcrumbs">
-			<li><a href="Default.aspx">Home</a></li>
+			<li><a href="FileClaim.aspx">Home</a></li>
 			<asp:ContentPlaceHolder ID="PlaceholderBreadcrumbs" runat="server"></asp:ContentPlaceHolder>
 		</ul>
 		<div id="main">
