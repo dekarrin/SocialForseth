@@ -12,7 +12,8 @@
 <body>
 	<form id="form1" runat="server">
 		<div id="header">
-			<asp:Label ID="LabelMainTitle" runat="server" Text="Social Forseth"></asp:Label>
+    
+        <img alt="HCIForseth Logo" class="auto-style1" src="/images/HCIForsethLogo.png" /><br />
    		</div>
 		<div id="userbar" style="text-align: center">
 			<table style="width:100%;">

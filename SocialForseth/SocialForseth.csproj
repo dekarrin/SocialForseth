@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="account.cs">
-      <DependentUpon>HCIModel.tt</DependentUpon>
+      <DependentUpon>HCIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AccountSummary.aspx.cs">
       <DependentUpon>AccountSummary.aspx</DependentUpon>
@@ -94,7 +94,7 @@
       <DependentUpon>AccountSummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="claim.cs">
-      <DependentUpon>HCIModel.tt</DependentUpon>
+      <DependentUpon>HCIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FileClaim.aspx.cs">
       <DependentUpon>FileClaim.aspx</DependentUpon>
@@ -110,20 +110,20 @@
     <Compile Include="Forseth.Master.designer.cs">
       <DependentUpon>Forseth.Master</DependentUpon>
     </Compile>
-    <Compile Include="HCIModel.Context.cs">
+    <Compile Include="HCIDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HCIModel.Context.tt</DependentUpon>
+      <DependentUpon>HCIDataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HCIModel.cs">
+    <Compile Include="HCIDataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HCIModel.tt</DependentUpon>
+      <DependentUpon>HCIDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="HCIModel.Designer.cs">
+    <Compile Include="HCIDataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HCIModel.edmx</DependentUpon>
+      <DependentUpon>HCIDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Help.aspx.cs">
       <DependentUpon>Help.aspx</DependentUpon>
@@ -153,22 +153,22 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Forseth.Master" />
-    <EntityDeploy Include="HCIModel.edmx">
+    <EntityDeploy Include="HCIDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HCIModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>HCIDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="HCIModel.Context.tt">
+    <Content Include="HCIDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HCIModel.edmx</DependentUpon>
-      <LastGenOutput>HCIModel.Context.cs</LastGenOutput>
+      <DependentUpon>HCIDataModel.edmx</DependentUpon>
+      <LastGenOutput>HCIDataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="HCIModel.edmx.diagram">
-      <DependentUpon>HCIModel.edmx</DependentUpon>
+    <Content Include="HCIDataModel.edmx.diagram">
+      <DependentUpon>HCIDataModel.edmx</DependentUpon>
     </Content>
-    <Content Include="HCIModel.tt">
+    <Content Include="HCIDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HCIModel.edmx</DependentUpon>
-      <LastGenOutput>HCIModel.cs</LastGenOutput>
+      <DependentUpon>HCIDataModel.edmx</DependentUpon>
+      <LastGenOutput>HCIDataModel.cs</LastGenOutput>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -11,8 +11,8 @@
     <hr />
     <asp:GridView ID="GridView1" runat="server" DataSourceID="ObjectDataSource1" AutoGenerateColumns="False">
         <Columns>
-            <asp:BoundField DataField="account" HeaderText="Account" SortExpression="account" />
-            <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" />
+            <asp:BoundField DataField="claimaccount" HeaderText="Account" SortExpression="claimaccount" />
+            <asp:BoundField DataField="amount" HeaderText="Amount (cents)" SortExpression="amount" />
             <asp:BoundField DataField="location" HeaderText="Location" SortExpression="location" />
         </Columns>
     </asp:GridView>

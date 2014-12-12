@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HCIDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="HCIDataModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="accounts">
           <Key>
             <PropertyRef Name="id" />
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="account" Type="int" Nullable="false" />
           <Property Name="amount" Type="int" />
           <Property Name="location" Type="nvarchar" MaxLength="50" />
@@ -36,7 +36,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="HCIDataModelStoreContainer">
+        <EntityContainer Name="HCIDataModel1StoreContainer">
           <EntitySet Name="accounts" EntityType="Self.accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="claims" EntityType="Self.claims" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_claims_accounts" Association="Self.FK_claims_accounts">
@@ -48,7 +48,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="HCIDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="HCIDataModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="account">
           <Key>
             <PropertyRef Name="id" />
@@ -62,7 +62,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="account" Type="Int32" Nullable="false" />
           <Property Name="amount" Type="Int32" />
           <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -82,7 +82,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="HCIDataEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HCIDataEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="accounts" EntityType="Self.account" />
           <EntitySet Name="claims" EntityType="Self.claim" />
           <AssociationSet Name="FK_claims_accounts" Association="Self.FK_claims_accounts">
@@ -95,9 +95,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HCIDataModelStoreContainer" CdmEntityContainer="HCIDataEntities1">
+        <EntityContainerMapping StorageEntityContainer="HCIDataModel1StoreContainer" CdmEntityContainer="HCIDataEntities">
           <EntitySetMapping Name="accounts">
-            <EntityTypeMapping TypeName="HCIDataModel.account">
+            <EntityTypeMapping TypeName="HCIDataModel1.account">
               <MappingFragment StoreEntitySet="accounts">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="handle" ColumnName="handle" />
@@ -106,7 +106,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="claims">
-            <EntityTypeMapping TypeName="HCIDataModel.claim">
+            <EntityTypeMapping TypeName="HCIDataModel1.claim">
               <MappingFragment StoreEntitySet="claims">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="account" ColumnName="account" />

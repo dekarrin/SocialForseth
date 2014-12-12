@@ -1,15 +1,23 @@
 ﻿body {
 }
 
-.topic_row {
-	background-color: #cccccc;
-	border-color: #000000;
-	border-style: solid;
-	border-width: 1px;
+body {
+    min-width: 900px;
 }
 
-.topic_row td.title {
-	width: 80%;
+#userbar {
+    background-color: #91C8FF;
+    border: 1px solid #216BB5;
+    color: #000000;
+}
+
+#userbar a {
+    color: #000000;
+    font-weight: bold;
+}
+
+#userbar a:hover {
+    text-decoration: none;
 }
 
 #actions_cell {
